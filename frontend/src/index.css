@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+th  {
+  margin: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+td  {
+  margin-top: 5px;
+  
+}
+
+input, button, label {
+  margin-top: 10px;
+
+}

@@ -1,0 +1,170 @@
+/* Base styling */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f9fc; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+/* Container for the application */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+}
+
+/* Loader styling */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure modal is above other elements */
+}
+
+.modal-content {
+    background: #ffffff; /* White background for modal */
+    padding: 2rem;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Full width on small screens */
+    max-width: 400px; /* Limit width on larger screens */
+}
+
+/* Close button */
+.close {
+    color: #ff4d4d; /* Red for close button */
+    float: right;
+    font-size: 24px;
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Contacts header */
+.contacts {
+    width: 100%;
+    margin-bottom: 2rem; /* Space below header */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin: 1rem 0; /* Space around the table */
+    background: white; /* White background for table */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents overflow */
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea; /* Light border for table rows */
+    border-spacing: 1rem;
+}
+
+th {
+    background-color: #f2f2f2; /* Light grey background for header */
+    font-weight: bold; /* Bold text for headers */
+}
+
+button {
+    padding: 0.5rem 1rem; /* Add padding for better click area */
+    margin-right: 0.5rem; /* Add space to the right of the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #007bff; /* Primary background color */
+    color: white; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Add hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Error message styling */
+.errormessage {
+    color: #ff4d4d; /* Red for error messages */
+    margin-top: 1rem; /* Space above error message */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Full width on small screens */
+    }
+    
+    table {
+        font-size: 14px; /* Smaller font size for tables */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        margin-bottom: 1rem; /* Space between buttons */
+    }
+}
+/* Form container styling */
+.form-container {
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 1rem; /* Space between form elements */
+    width: 100%; /* Full width */
+}
+
+/* Label and input styling */
+.label-input {
+    display: flex; /* Use flexbox for label and input */
+    align-items: center; /* Align items vertically */
+    gap: 0.7rem; /* Space between label and input */
+}
+
+/* Set consistent width for inputs */
+input {
+    text-align: left;
+    flex: 1; /* Allow inputs to take available space */
+    padding: 0.5rem; /* Add padding for better touch targets */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    max-width: 400px; /* Maximum width for inputs */
+}
+
+/* Focus styling for inputs */
+input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+}
+
+/* Ensure that the label and input have the same width */
+.label-input {
+    width: 100%; /* Make sure the entire line takes full width */
+}
+
+.label-input label {
+    flex-basis: 150px; /* Fixed width for labels to align inputs consistently */
+    text-align: left; /* Align text to the right for better readability */
+}

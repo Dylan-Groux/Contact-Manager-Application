@@ -1,0 +1,75 @@
+Contact Manager Application
+Description
+Cette application de gestion de contacts vous permet d'ajouter, de mettre à jour, de supprimer et de visualiser vos contacts. Elle utilise un backend Flask pour la gestion des données et un frontend React pour l'interface utilisateur.
+
+Technologies Utilisées
+Frontend : React, Axios, React Loader Spinner
+Backend : Flask, SQLAlchemy
+Base de données : SQLite
+CSS : Styles personnalisés
+Fonctionnalités
+CRUD : Créer, Lire, Mettre à jour et Supprimer des contacts.
+Validation : Vérification des champs de formulaire dans le frontend pour garantir des données correctes avant l'envoi. Les données sont également vérifiées lors de leur entrée dans la base de données dans le backend.
+Chargement : Indicateur de chargement dynamique pendant les requêtes API.
+Structure du Projet
+bash
+Copier le code
+/project-root
+│
+├── /backend
+│   ├── app.py           # Fichier principal du serveur Flask
+│   ├── config.py        # Configuration de la base de données
+│   ├── models.py        # Modèle de données pour les contacts
+│   └── requirements.txt  # Dépendances Python
+│
+├── /frontend
+│   ├── /src
+│   │   ├── App.js       # Composant principal
+│   │   ├── components/
+│   │   │   ├── CheckField.js   # Validation des champs
+│   │   │   ├── ContactForm.js    # Formulaire de contact
+│   │   │   ├── ContactList.js     # Liste des contacts
+│   │   │   └── ApiRequest.js       # Gestion des requêtes API
+│   │   ├── index.js     # Point d'entrée de l'application React
+│   │   └── App.css      # Styles CSS
+│   └── package.json      # Dépendances Node.js
+│
+└── README.txt            # Documentation du projet
+Installation
+Backend
+Naviguez dans le dossier backend.
+Installez les dépendances :
+bash
+Copier le code
+pip install -r requirements.txt
+Lancez le serveur :
+bash
+Copier le code
+python app.py
+Frontend
+Naviguez dans le dossier frontend.
+Installez les dépendances :
+bash
+Copier le code
+npm install
+Lancez l'application :
+bash
+Copier le code
+npm start
+Utilisation
+Ouvrez votre navigateur et accédez à http://127.0.0.1:3000.
+Vous verrez la liste des contacts, avec la possibilité d'ajouter de nouveaux contacts ou de mettre à jour des contacts existants.
+Utilisez le bouton "Create new contact" pour ouvrir le formulaire d'ajout de contact.
+Screenshots
+
+Contribution
+Les contributions sont les bienvenues ! N'hésitez pas à soumettre un pull request pour toute amélioration ou correction.
+
+Auteurs
+Votre Nom
+License
+Ce projet est sous licence MIT. Pour plus de détails, consultez le fichier LICENSE.
+
+Notes
+Changements dynamiques : Le logo de chargement a été stylisé avec des animations pour une meilleure expérience utilisateur.
+Validation des entrées : Les noms, numéros de téléphone et e-mails sont vérifiés dans le frontend avant l'envoi, puis re-vérifiés lors de leur entrée dans la base de données dans le backend pour garantir l'intégrité des données.

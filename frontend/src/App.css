@@ -1,0 +1,167 @@
+
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f9fc; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+/* Container for the application */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+}
+
+/* Loader styling */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure modal is above other elements */
+}
+
+.modal-content {
+    background: #ffffff; /* White background for modal */
+    padding: 2rem;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Full width on small screens */
+    max-width: 400px; /* Limit width on larger screens */
+}
+
+/* Close button */
+.close {
+    color: #ff4d4d; /* Red for close button */
+    float: right;
+    font-size: 24px;
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Contacts header */
+.contacts {
+    width: 100%;
+    margin-bottom: 1rem; /* Space below header */
+    display: flex;
+    justify-content: center;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0; /* Space around the table */
+    background: white; /* White background for table */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents overflow */
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea; /* Light border for table rows */
+}
+
+th {
+    background-color: #f2f2f2; /* Light grey background for header */
+    font-weight: bold; /* Bold text for headers */
+}
+
+/* Button styling */
+button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 0.5rem 1rem; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.errormessage {
+    color: #ff4d4d; /* Red for error messages */
+    margin-top: 1rem; /* Space above error message */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Full width on small screens */
+    }
+    
+    table {
+        font-size: 14px; /* Smaller font size for tables */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        margin-bottom: 1rem; /* Space between buttons */
+    }
+}
+
+
+
+/* Style du conteneur de chargement */
+.bg-slate-500 {
+    display: flex; /* Pour centrer l'élément */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-color: #f9fafb; /* Couleur de fond claire */
+    animation: backgroundAnimation 3s infinite alternate; /* Animation de fond */
+}
+
+/* Animation de fond */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #f9fafb; /* Couleur de fond claire */
+    }
+    100% {
+        background-color: #e5e7eb; /* Couleur légèrement plus sombre */
+    }
+}
+
+/* Style de l'indicateur de chargement */
+.loader-container {
+    animation: bounce 1s infinite; /* Animation de rebond */
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Position initiale */
+    }
+    50% {
+        transform: translateY(-20px); /* Lève l'élément */
+    }
+}
+
+/* Style pour l'oval spinner */
+.Oval {
+    margin: 0 auto; /* Centrer le spinner */
+}
